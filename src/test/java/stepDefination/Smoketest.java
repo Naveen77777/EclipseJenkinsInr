@@ -21,8 +21,8 @@ public class Smoketest {
 	   WebDriver driver;
 	   
 	
-	 @Given("^Open Firefox and start application$")
-	public void open_chrome_and_start_application() throws Throwable {
+	 @Given("^A Open Firefox and start application$")
+	public void a_open_chrome_and_start_application() throws Throwable {
 		driver = new FirefoxDriver();
 		   /*System.setProperty("webdriver.chrome.driver", "D:\\Selenium 1234\\chromedriver.exe");
 		    /*ChromeOptions options = new ChromeOptions();
@@ -34,15 +34,15 @@ public class Smoketest {
 		    Thread.sleep(2000);
 	}
 
-	@When("^Enter valid \"([^\"]*)\" and valid \"([^\"]*)\"$")
-	public void enter_valid_mailid_and_valid_password(String Uname, String Password) throws Throwable {
+	@When("^B Enter valid \"([^\"]*)\" and valid \"([^\"]*)\"$")
+	public void b_enter_valid_mailid_and_valid_password(String Uname, String Password) throws Throwable {
 	    
 	    driver.findElement(By.name("UserName")).sendKeys(Uname);
 	    driver.findElement(By.name("Password")).sendKeys(Password);
 	    Thread.sleep(4000);    		
 	}
 
-	@Then("^User should able to login successfully and navigated to Home page$")
+	@Then("^C User should able to login successfully and navigated to Home page$")
 	public void user_should_able_to_login_successfully_and_navigated_to_Home_page() throws Throwable {
 	  driver.findElement(By.className("submit")).click(); 
 	  Thread.sleep(4000);
@@ -50,14 +50,15 @@ public class Smoketest {
 	  Thread.sleep(3000);
 	}
 	
-	@Then("^User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs$")
-	public void user_Clicked_on_Timelog_button_and_Enter_the_Timelog_for_the_Tue_and_Thu_days_for_Hrs() throws Throwable {
+	@Then("^DUser Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs$")
+	public void d_user_Clicked_on_Timelog_button_and_Enter_the_Timelog_for_the_Tue_and_Thu_days_for_Hrs() throws Throwable {
 		  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		  String parentWindowHandle = driver.getWindowHandle();
-		  driver.findElement(By.xpath("//span[contains(@class,'text-center ng-binding')][contains(text(),'Timelog')]")).click();
+		  
+		  
 		  //String parentWindowHandle = driver.getWindowHandle();
+		  driver.findElement(By.xpath("//span[contains(@class,'text-center ng-binding')][contains(text(),'Timelog')]")).click();
 		  Thread.sleep(5000); 
-	  	 			        
+		  String parentWindowHandle = driver.getWindowHandle();		        
 	       Set<String> windowHandles = driver.getWindowHandles();
 	       System.out.println(windowHandles.size());
 	        Iterator<String> it = windowHandles.iterator();
@@ -65,11 +66,15 @@ public class Smoketest {
 	        while (it.hasNext()) {
 	        wHandle = it.next();
 	       driver.switchTo().window(wHandle);
-	      if (driver.getCurrentUrl().equals("https://asapfe.kpit.com/sap/bc/ui5_ui5/sap/ztimedesktop/index.html")) {
+	       Thread.sleep(4000);
+	      if (driver.getCurrentUrl().equals("https://asapfe.kpit.com/sap/bc/ui5_ui5/sap/ztimedesktop/index.html")) 
 	      {
-	    	   Select proj = new Select(driver.findElement(By.cssSelector("__item12-idhomeToView1--myTable-0_cell0")));
-	    		 proj.selectByValue("E.0010104.1");
-	    		 Thread.sleep(2000);
+	    	   
+	    	  /*driver.findElement(By.xpath("//button[@id='idhomeToView1--idselectProject-idhomeToView1--myTable-0-arrow']")).submit();
+	    	  //Thread.sleep(4000);
+	    	  Select proj = new Select(driver.findElement(By.cssSelector("//button[@id='idhomeToView1--idselectProject-idhomeToView1--myTable-0-arrow']")));
+	    	    proj.selectByIndex(0);
+	    		 Thread.sleep(4000);
 	    		 Select roleId = new Select(driver.findElement(By.xpath(".//*[@id='idhomeToView1--idselectProject11-idhomeToView1--myTable-0-inner']")));
 	    		 roleId.selectByValue("1850027 "); 
 	    		 Thread.sleep(2000); 
@@ -78,30 +83,33 @@ public class Smoketest {
 	    		 Thread.sleep(2000);
 	    		 Select subActivity = new Select(driver.findElement(By.xpath(".//*[@id='idhomeToView1--idselectProject3-idhomeToView1--myTable-0-inner']")));
 	    		 subActivity.selectByValue("FUNCTION TESTING"); 
-	    		 Thread.sleep(2000);
+	    		 Thread.sleep(2000);*/
 	    		 
 	          //driver.findElement(By.xpath("//input[@id='idhomeToView1--ip2-idhomeToView1--myTable-0-inner']")).sendKeys("9");
-	          driver.findElement(By.xpath("//input[@id='idhomeToView1--ip4-idhomeToView1--myTable-0-inner']")).sendKeys("9");
+	    	  driver.findElement(By.xpath("//input[@id='idhomeToView1--ip1-idhomeToView1--myTable-0-inner']")).clear();
+	          driver.findElement(By.xpath("//input[@id='idhomeToView1--ip1-idhomeToView1--myTable-0-inner']")).sendKeys("9");
 	          driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 	          
 	          driver.findElement(By.xpath("//span[contains(@class,'sapMBtnContent')][contains(text(),'SUBMIT')]")).click();
+	          Thread.sleep(2000);
+	          }
+	        }
+	          driver.close();
 	          
-	      }
-	      driver.close(); 
-	      }
+	        
 	      driver.switchTo().window(parentWindowHandle);
-	      
+	      Thread.sleep(4000);
+	}
+  
+      
 	      //driver.findElement(By.xpath("//span[contains(@class,'text-center ng-binding')][contains(text(),'Attendance')]")).click();
-		  Thread.sleep(3000);
-		 // driver.findElement(By.xpath("//md-icon[@class='mt-2 mr-10 ng-scope md-default-theme']")).click();
-	      
-	  }  
-	}  
+		  
+		 // driver.findElement(By.xpath("//md-icon[@class='mt-2 mr-10 ng-scope md-default-theme']")).click(); 
 			 
-	  @Then("^User clicked on KPMS link and User nagivated to KPMS website$")
+	  /*@Then("^User clicked on KPMS link and User nagivated to KPMS website$")
 	  public void user_clicked_on_KPMS_link_and_User_nagivated_to_KPMS_website() throws Throwable {
 		  driver.findElement(By.xpath("//span[contains(@class,'text-center ng-binding')][contains(text(),'Attendance')]")).click();
-		  Thread.sleep(3000);
+		  Thread.sleep(4000);
 		  driver.findElement(By.xpath("//md-icon[@class='mt-2 mr-10 ng-scope md-default-theme']")).click();
 		  
 		  /*  driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -137,5 +145,5 @@ public class Smoketest {
 	       
 	
 	  }
-  }
+  
 	

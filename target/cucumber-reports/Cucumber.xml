@@ -1,49 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="58.963839">
-<testcase classname="MyWorld application login" name="Test with login valid credentials" time="58.963599">
-<failure message="org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;__item12-idhomeToView1--myTable-0_cell0&quot;}&#10;Command duration or timeout: 20.08 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'&#10;System info: host: 'L-8850', ip: '169.254.116.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 7aa10834-b722-42c8-a789-0fcffc7eed10&#10;*** Element info: {Using=css selector, value=__item12-idhomeToView1--myTable-0_cell0}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)&#13;&#10;&#9;at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)&#13;&#10;&#9;at stepDefination.Smoketest.user_Clicked_on_Timelog_button_and_Enter_the_Timelog_for_the_Tue_and_Thu_days_for_Hrs(Smoketest.java:70)&#13;&#10;&#9;at ✽.Then User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs(MyApplication.feature:27)&#13;&#10;Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;__item12-idhomeToView1--myTable-0_cell0&quot;}&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'&#10;System info: host: 'L-8850', ip: '169.254.116.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'&#10;Driver info: driver.version: unknown&#13;&#10;&#9;at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/naveenm2/AppData/Local/Temp/anonymous7750389405071452803webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)&#13;&#10;&#9;at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/naveenm2/AppData/Local/Temp/anonymous7750389405071452803webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)&#13;&#10;"><![CDATA[Given Open Firefox and start application....................................passed
-When Enter valid "naveenm2@kpit.com" and valid "mnk_77788"..................passed
-Then User should able to login successfully and navigated to Home page......passed
-Then User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs.failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"__item12-idhomeToView1--myTable-0_cell0"}
-Command duration or timeout: 20.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'L-8850', ip: '169.254.116.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=43.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7aa10834-b722-42c8-a789-0fcffc7eed10
-*** Element info: {Using=css selector, value=__item12-idhomeToView1--myTable-0_cell0}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:492)
-	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at stepDefination.Smoketest.user_Clicked_on_Timelog_button_and_Enter_the_Timelog_for_the_Tue_and_Thu_days_for_Hrs(Smoketest.java:70)
-	at ✽.Then User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs(MyApplication.feature:27)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"__item12-idhomeToView1--myTable-0_cell0"}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'L-8850', ip: '169.254.116.49', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_162'
-Driver info: driver.version: unknown
-	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/naveenm2/AppData/Local/Temp/anonymous7750389405071452803webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/naveenm2/AppData/Local/Temp/anonymous7750389405071452803webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
-]]></failure>
-</testcase>
-<testcase classname="MyWorld application login" name="Attendance Over view" time="0.00024">
-<failure message="java.lang.NullPointerException&#13;&#10;&#9;at stepDefination.Smoketest.user_clicked_on_KPMS_link_and_User_nagivated_to_KPMS_website(Smoketest.java:103)&#13;&#10;&#9;at ✽.Then User clicked on KPMS link and User nagivated to KPMS website(MyApplication.feature:37)&#13;&#10;"><![CDATA[Then User clicked on KPMS link and User nagivated to KPMS website...........failed
-
-StackTrace:
-java.lang.NullPointerException
-	at stepDefination.Smoketest.user_clicked_on_KPMS_link_and_User_nagivated_to_KPMS_website(Smoketest.java:103)
-	at ✽.Then User clicked on KPMS link and User nagivated to KPMS website(MyApplication.feature:37)
-]]></failure>
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="1" tests="1" time="28.939867">
+<testcase classname="MyWorld application login" name="Test with login valid credentials" time="28.939867">
+<skipped><![CDATA[Given A Open Firefox and start application..................................passed
+When B Enter valid "naveenm2@kpit.com" and valid "mnk_77788"................passed
+Then C User should able to login successfully and navigated to Home page....passed
+Then D User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs.undefined
+]]></skipped>
 </testcase>
 </testsuite>

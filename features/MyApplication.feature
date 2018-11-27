@@ -21,10 +21,10 @@ Feature: MyWorld application login
 
   @tag1
   Scenario: Test with login valid credentials
-    Given Open Firefox and start application
-    When Enter valid "naveenm2@kpit.com" and valid "mnk_77788"
-    Then User should able to login successfully and navigated to Home page
-    Then  User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs
+    Given A Open Firefox and start application
+    When B Enter valid "naveenm2@kpit.com" and valid "mnk_77788"
+    Then C User should able to login successfully and navigated to Home page
+    Then  D User Clicked on Timelog button and Enter the Timelog for the Tue and Thu days for Hrs
     
 
     
@@ -32,8 +32,8 @@ Feature: MyWorld application login
     #  | username           | password  |
     #  | naveenm2@kpit.com  | mnk_77788 | 
        
-  @tag2
-  Scenario: Attendance Over view
-       Then User clicked on KPMS link and User nagivated to KPMS website
+ # @tag2
+  #Scenario: Attendance Over view
+      #Then User clicked on KPMS link and User nagivated to KPMS website
        
        
